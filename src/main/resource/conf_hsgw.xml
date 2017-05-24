@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+
+ <property>
+ <name>hbase.zookeeper.quorum</name>
+  <value>192.168.159.100</value>
+  <description>zookeeper节点地址</description>
+   </property>
+
+ <property>
+ <name>hbase.zookeeper.property.clientPort</name>
+  <value>2181</value>
+  <description>zookeeper端口号</description>
+   </property>
+
+ <property>
+ <name>conf.mapreduce.dataSperator</name>
+  <value>\t</value>
+  <description>文件数据分隔符16进制</description>
+   </property>
+
+
+ <property>
+ <name>conf.HBase.TableName</name>
+  <value>testTable</value>
+  <description>Hbase表名</description>
+   </property>
+
+ <property>
+ <name>conf.HBase.Rowkeypos</name>
+  <value>RAND_ID</value>
+  <description>hbase Rowkey需要的字段</description>
+   </property>
+
+
+ <property>
+ <name>conf.HBase.familyName</name>
+  <value>info</value>
+  <description>Hbase中列族的名称,前提Hbase表中已经有所配置的列族</description>
+   </property>
+
+
+ <property>
+ <name>conf.hive.field</name>
+  <value>RECORD_TYPE,IMSI,SGW_ADDR,CHARGING_ID,SERVING_NODE_ADDR,APN_NI,PDP_TYPE,PDP_ADDR,DYNAMIC_ADDR_FLAG,LIST_OF_TRAFFIC_VOLUMES,RECORD_OPENING_TIME,DURATION,CAUSES_CLOSING,DIAGNOSTICS,REC_SEQ,NODE_ID,RECORD_EXTENSIONS,LOCAL_SEQ_NUMBER,APN_MODE,MSISDN,CHARGING_CHARACTERISTICS,CHCH_SELECTION_MODE,PLMN_ID,SERVED_IMEISV,RAT_TYPE,THREE_GPP2_USER_LOCA_INFO,SGW_CHANGE,NODE_TYPE,PGW_ADDR,START_TIME,STOP_TIME,SERVED_3GPP2_MEID,IMSI_UNAUTH_FLAG,SERVED_PDPPDN_ADD_EXT,DYNAMIC_ADDR_FLAGEXT,SGW_IPV6_ADDR,SERVING_NODEIPV6_ADDR,PGW_IPV6_ADDR_USED,FEE_TYPE,OP_TIME,RAND_ID</value>
+       <description>一行数据中，切分后所有字段在hive表中的字段名称 ,须以数据顺序来填写 “,”分割</description>
+        </property>
+
+ <property>
+<name>conf.Hbase.qualifier</name>
+  <value>RECORD_TYPE,IMSI,SGW_ADDR,CHARGING_ID,SERVING_NODE_ADDR,APN_NI,PDP_TYPE,PDP_ADDR,DYNAMIC_ADDR_FLAG,LIST_OF_TRAFFIC_VOLUMES,RECORD_OPENING_TIME,DURATION,CAUSES_CLOSING,DIAGNOSTICS,REC_SEQ,NODE_ID,RECORD_EXTENSIONS,LOCAL_SEQ_NUMBER,APN_MODE,MSISDN,CHARGING_CHARACTERISTICS,CHCH_SELECTION_MODE,PLMN_ID,SERVED_IMEISV,RAT_TYPE,THREE_GPP2_USER_LOCA_INFO,SGW_CHANGE,NODE_TYPE,PGW_ADDR,START_TIME,STOP_TIME,SERVED_3GPP2_MEID,IMSI_UNAUTH_FLAG,SERVED_PDPPDN_ADD_EXT,DYNAMIC_ADDR_FLAGEXT,SGW_IPV6_ADDR,SERVING_NODEIPV6_ADDR,PGW_IPV6_ADDR_USED,FEE_TYPE,OP_TIME,RAND_ID</value>
+       <description>写入Hbase表中的数据字段</description>
+        </property>
+
+</configuration>
